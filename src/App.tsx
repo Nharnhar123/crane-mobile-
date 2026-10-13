@@ -375,6 +375,9 @@ function App() {
                   <motion.img
                     src={crane1}
                     alt="Mobile crane lifting materials at a construction site"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     animate={reduceMotion ? undefined : { scale: [1, 1.04, 1] }}
                     transition={{ duration: 9, ease: 'easeInOut', repeat: Infinity }}
                     className="h-[560px] w-full object-cover"
@@ -422,6 +425,8 @@ function App() {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
+                    decoding="async"
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-[#101C2C]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5B82E] backdrop-blur-sm">
@@ -479,7 +484,13 @@ function App() {
                   }}
                   className="group relative overflow-hidden rounded-[1.4rem] border border-slate-700 text-left"
                 >
-                  <img src={image.image} alt={image.title} className="h-80 w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <img
+                    src={image.image}
+                    alt={image.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#101C2C]/90 via-[#101C2C]/15 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <span className="inline-flex rounded-full border border-[#F5B82E]/40 bg-[#203B59]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5B82E]">
@@ -543,6 +554,8 @@ function App() {
                 <img
                   src={crane5}
                   alt="Mobile crane working on a construction site"
+                  loading="lazy"
+                  decoding="async"
                   className="h-[520px] w-full rounded-[1.5rem] object-cover"
                 />
                 <div className="absolute bottom-8 left-8 rounded-2xl bg-[#101C2C]/85 p-4 text-white backdrop-blur-sm">
@@ -659,6 +672,8 @@ function App() {
             <img
               src={crane7}
               alt="Crane operating at a construction site"
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover opacity-30"
             />
           </div>
@@ -753,6 +768,8 @@ function App() {
               <img
                 src={crane4}
                 alt="Heavy equipment lifting at a site"
+                loading="lazy"
+                decoding="async"
                 className="h-full min-h-[480px] w-full rounded-[1.5rem] object-cover"
               />
             </motion.div>
